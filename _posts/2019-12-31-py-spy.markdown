@@ -1,0 +1,45 @@
+---
+layout: post
+title:  "Statistical profiling with flame graphs"
+date:   2019-07-08 10:05:00 +0300
+categories: benchmark profile
+---
+
+## Profile with flame graphs
+
+[Flame graphs](http://www.brendangregg.com/flamegraphs.html) are a visualization of profiled software, allowing the most frequent code-paths to be identified quickly and accurately. Flame graphs are based on sampling data gathered by external tools.
+
+Summary from [Flame graphs](http://www.brendangregg.com/flamegraphs.html):
+
+> _The x-axis shows the stack profile population, sorted alphabetically (it is not the passage of time), and the y-axis shows stack depth, counting from zero at the bottom. Each rectangle represents a stack frame. The wider a frame is is, the more often it was present in the stacks. The top edge shows what is on-CPU, and beneath it is its ancestry. The colors are usually not significant, picked randomly to differentiate frames._
+
+It's important to understand that it's *not the passage of time on x-axis* though it would look like it, but the number of samples.
+
+
+### Py-Spy
+
+[Py-Spy](https://github.com/benfred/py-spy) is a sampling profiler for Python programs. It lets you visualize what your Python program is spending time on without restarting the program or modifying the code in any way.
+
+#### How to run it?
+
+There are two options on how to run Py-Spy. You can start Python script using Py-Spy, e.g. `py-spy -- python myprogram.py`, or you can attach Py-Spe to running process, e.g. `py-spy --pid 12345`. We are using the latter here. It requires running Py-Spy with admin permissions (`sudo`).
+
+You can use Py-Spy to monitor your app with [top like](https://linux.die.net/man/1/top) view or to draw flame graphs. We are using the latter.
+
+Following command is used
+
+```
+py-spy --duration 3 --rate 2000 --flame profile.svg --pid <PID>
+```
+
+Separate script is used to connect starting of profiler and sending the request. You can adjust `--duration` and `--rate` depending on how long the profiled event is lasting.
+
+See `profiling/run_py-spy.py`.
+
+
+### PyFlame
+
+There's also PyFlame from Uber for sampling. [Pyflame](https://github.com/uber/pyflame) from Uber is a profiling tool that generates flame graphs for Python. See [docs](https://pyflame.readthedocs.io) more details. PyFlame would do the same profiling as Py-Spy, but won't work in OSX or Windows.
+
+If for some reason Py-Spy does not work, it's good to check PyFlame.
+
