@@ -1,7 +1,0 @@
-site_name: Fast Python
-theme:
-  name: 'material'
-  palette:
-    primary: 'indigo'
-    accent: 'indigo'
-
