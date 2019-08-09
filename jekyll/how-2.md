@@ -76,3 +76,13 @@ INFO    -  Cleaning site directory
 
 Open up `http://127.0.0.1:8000/` in your browser again. Now just to browse through the [mkdocs-material](https://squidfunk.github.io/mkdocs-material/getting-started/) pages.
 
+
+# How to deploy to Github Pages
+
+1. Commit and push source to github
+1. Deploy to gh-pages
+
+```
+mkdocs gh-deploy
+```
+
