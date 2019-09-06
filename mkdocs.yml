@@ -1,7 +1,25 @@
 site_name: Fast Python
+nav:
+  - Home: "index.md"
+  - About:
+    - "What is this?": "about/what.md"
+    - "How it is made?": "about/how.md"
+  - Story: 
+    - "The story": "story/index.md"
+    - "Example project": "story/2019-04-12-example-project.md"
+  - Blog: 
+    - "The blog": "blog/index.md"
+    - "2019-07-19 - Timing decorator": "blog/2019-07-19-timing-decorator.md"
+    - "2019-07-05 - wrk": "blog/2019-07-05-wrk.md"
+    - "2019-06-21 - Hypothesis": "blog/2019-06-21-hypothesis.md"
+    - "2019-06-07 - Testing": "blog/2019-06-07-testing.md"
+    - "2019-05-24 - Optimize third": "blog/2019-05-24-optimize-third.md"
+    - "2019-05-10 - Measure second": "blog/2019-05-10-measure-second.md"
+    - "2019-04-26 - Think first": "blog/2019-04-26-think-first.md"
+    - "2019-04-12 - Example project": "blog/2019-04-12-example-project.md"
+    - "2019-03-29 - What is this": "blog/2019-03-29-what-is-this.md"
 theme:
-  name: 'material'
+  name: "material"
   palette:
-    primary: 'indigo'
-    accent: 'indigo'
-
+    primary: "indigo"
+    accent: "indigo"

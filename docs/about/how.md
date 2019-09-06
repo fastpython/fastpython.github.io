@@ -1,6 +1,6 @@
 ---
 layout: page
-title: How
+title: How?
 permalink: /how/
 categories: start-with-this
 ---
@@ -8,7 +8,7 @@ categories: start-with-this
 
 # How is this blog created
 
-Content of the blog comes from lessons learned while developing web apps. One of the good tips to give is how this blog is generated. 
+Content of the blog comes from lessons learned while developing software with Python for web. One of the good tips to give is how this blog is generated. 
 
 Blog is built using [MkDocs](https://www.mkdocs.org/) and hosted on [Github Pages](https://pages.github.com/). MkDocs is a fast and simple static site generator that's geared towards building project documentation. The theme is [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/). With MkDocs all site content is written in Markdown and pages configured with a single YAML configuration file.
 
@@ -18,12 +18,16 @@ Even though MkDocs is meant for project documentation it's very good alternative
 - You can use markdown. 
 - Need only text editor. 
 - Use Git for version control. 
-- Lightweight process (_write, commit, done_)
+- Lightweight process (_write, commit, push_)
 
 Combination of MkDocs and Github Pages is very easy to like if you are a software developer by profession. Not to forget that MkDocs is of course [developed with Python](https://github.com/mkdocs/mkdocs/).
 
 
-![MkDocs Material](/assets/img/mkdocs-material-theme.png)
+<div style="text-align:center; margin-top: 3em; margin-bottom: 3em;">
+    <a href="https://squidfunk.github.io/mkdocs-material/">
+        <img src="/img/mkdocs-material-theme.png" title="MkDocs Material">
+    </a>
+</div>
 
 
 ## How to get started
@@ -92,3 +96,5 @@ Whatever branch you use, don't ignore the warning that MkDocs documentation give
 
 On other words it means that you should not edit any files in _the deploy branch_, i.e. `master`. Deploy command will change them. Good method of working is to write your blog in e.g. `blog` branch. Commit all changes to `blog` branch and deploy using `master`. Github pages allow also using `gh-pages`, but there are limits and using `master` is support in all different cases.
 
+
+<div style="margin-top: 8em;"></div>
